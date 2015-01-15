@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7JT-G9-Zl6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7JT-G9-Zl6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -28,7 +28,6 @@
         <!--View Controller-->
         <scene sceneID="V7X-Eg-bhN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XOg-P7-Z5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="5cf-9v-JBq" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kaC-jD-IQD"/>
@@ -41,6 +40,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOg-P7-Z5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1557" y="-756"/>
         </scene>
@@ -278,7 +278,6 @@
                     <connections>
                         <segue destination="agX-Sv-Foh" kind="show" identifier="modal2" id="ZS8-Af-BUo"/>
                         <segue destination="RMy-jT-eG4" kind="presentation" identifier="modal1" id="7be-WQ-Jb7"/>
-                        <segue destination="Nwu-HJ-eTM" kind="unwind" unwindAction="unwindSegueViewController:" id="D7T-np-pF3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FeM-fH-KEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,23 +317,76 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifb-e9-jGe">
-                                <rect key="frame" x="84" y="247" width="46" height="30"/>
+                                <rect key="frame" x="45" y="312" width="46" height="30"/>
                                 <state key="normal" title="返回">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="back:" destination="agX-Sv-Foh" eventType="touchUpInside" id="A4a-cl-wEx"/>
-                                    <segue destination="Nwu-HJ-eTM" kind="unwind" unwindAction="unwindSegueViewController:" id="CZ7-Vw-Hr0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvE-e5-OD9">
+                                <rect key="frame" x="45" y="253" width="97" height="30"/>
+                                <state key="normal" title="unwind返回">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Nwu-HJ-eTM" kind="unwind" unwindAction="unwindSegueViewController:" id="R7x-VG-YPR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKd-I6-q3g">
+                                <rect key="frame" x="50" y="194" width="46" height="30"/>
+                                <state key="normal" title="绿色">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="I6e-a3-tcq" kind="show" id="HAM-mK-QNn"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPf-2v-qAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429" y="1616"/>
+            <point key="canvasLocation" x="1522" y="1694"/>
+        </scene>
+        <!--Green View Controller-->
+        <scene sceneID="Vah-xh-J4X">
+            <objects>
+                <viewController id="I6e-a3-tcq" customClass="GreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="olU-qb-5qs"/>
+                        <viewControllerLayoutGuide type="bottom" id="a1e-pV-jqq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LLP-07-2Dj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ku5-ee-jVC">
+                                <rect key="frame" x="65" y="174" width="60" height="30"/>
+                                <state key="normal" title="上一级">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgt-bz-ae7">
+                                <rect key="frame" x="65" y="232" width="60" height="30"/>
+                                <state key="normal" title="首页">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Nwu-HJ-eTM" kind="unwind" unwindAction="unwindSegueViewController:" id="qK1-9X-ASH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wV2-sJ-SWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="1694"/>
         </scene>
     </scenes>
 </document>

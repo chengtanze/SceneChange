@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14C2B0081A67FE860014605E /* GreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C2B0071A67FE860014605E /* GreenViewController.m */; };
 		FC7FA4D71A67531B007522E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7FA4D61A67531B007522E5 /* main.m */; };
 		FC7FA4DA1A67531B007522E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7FA4D91A67531B007522E5 /* AppDelegate.m */; };
 		FC7FA4DD1A67531B007522E5 /* SceneChange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC7FA4DB1A67531B007522E5 /* SceneChange.xcdatamodeld */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14C2B0061A67FE860014605E /* GreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenViewController.h; sourceTree = "<group>"; };
+		14C2B0071A67FE860014605E /* GreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenViewController.m; sourceTree = "<group>"; };
 		FC7FA4D11A67531B007522E5 /* SceneChange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneChange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7FA4D51A67531B007522E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC7FA4D61A67531B007522E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,9 +83,11 @@
 		FC7FA4C81A67531A007522E5 = {
 			isa = PBXGroup;
 			children = (
-				FC7FA4FD1A676B24007522E5 /* PresentTableViewController.h */,
+				14C2B0061A67FE860014605E /* GreenViewController.h */,
+				14C2B0071A67FE860014605E /* GreenViewController.m */,
 				FCC8CA451A67C83F00A405D7 /* SegueUnwindViewController.h */,
 				FCC8CA461A67C83F00A405D7 /* SegueUnwindViewController.m */,
+				FC7FA4FD1A676B24007522E5 /* PresentTableViewController.h */,
 				FC7FA4FE1A676B24007522E5 /* PresentTableViewController.m */,
 				FCC8CA421A679E3D00A405D7 /* JumpBySequeTableViewController.h */,
 				FCC8CA431A679E3D00A405D7 /* JumpBySequeTableViewController.m */,
@@ -249,6 +254,7 @@
 			files = (
 				FCC8CA441A679E3D00A405D7 /* JumpBySequeTableViewController.m in Sources */,
 				FC7FA4DD1A67531B007522E5 /* SceneChange.xcdatamodeld in Sources */,
+				14C2B0081A67FE860014605E /* GreenViewController.m in Sources */,
 				FC7FA4DA1A67531B007522E5 /* AppDelegate.m in Sources */,
 				FC7FA5021A676D25007522E5 /* PresentViewController.m in Sources */,
 				FC7FA5051A676EC3007522E5 /* CodeTableViewController.m in Sources */,

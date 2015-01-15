@@ -78,7 +78,7 @@
 }
 
 - (IBAction)unwindSegueViewController:(UIStoryboardSegue *)segue {
-    NSLog(@"%@, %@", segue.destinationViewController, segue.sourceViewController);
+    NSLog(@"%@, %@", [segue.destinationViewController description], [segue.sourceViewController description]);
 }
 
 /*
