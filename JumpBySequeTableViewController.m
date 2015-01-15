@@ -40,18 +40,46 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 3;
+    return 2;
 }
 
-/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"didSelectRowAtIndexPath :%ld", indexPath.row);
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+            [self performSegueWithIdentifier:@"modal1" sender:self];
+            break;
+        }
+        case 1:
+        {
+            [self performSegueWithIdentifier:@"modal2" sender:self];
+            break;
+        }
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"modally" forIndexPath:indexPath];
     
     // Configure the cell...
+    UITableViewCell * cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SettingItem"];
+    
+    if (cell != nil) {
+
+        cell.textLabel.text = @"present";
+       
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     
     return cell;
 }
-*/
+
+- (IBAction)unwindSegueViewController:(UIStoryboardSegue *)segue {
+    NSLog(@"%@, %@", segue.destinationViewController, segue.sourceViewController);
+}
 
 /*
 // Override to support conditional editing of the table view.

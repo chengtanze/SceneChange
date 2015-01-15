@@ -25,6 +25,25 @@
             </objects>
             <point key="canvasLocation" x="479" y="450.99999999999994"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="V7X-Eg-bhN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOg-P7-Z5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="5cf-9v-JBq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kaC-jD-IQD"/>
+                        <viewControllerLayoutGuide type="bottom" id="FVE-qT-qfU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wpz-hI-KPa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1557" y="-756"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="0ZB-dc-zn8">
             <objects>
@@ -83,6 +102,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="5cf-9v-JBq" kind="custom" id="YTN-Aw-wBs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hw-ba-eET" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,7 +219,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nL7-rB-d4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760" y="737"/>
+            <point key="canvasLocation" x="1580" y="737"/>
         </scene>
         <!--JumpByStoryboard-->
         <scene sceneID="tUM-qP-0Mx">
@@ -240,7 +262,7 @@
         <!--JumpBySeque-->
         <scene sceneID="Yjx-Jg-G1y">
             <objects>
-                <tableViewController title="JumpBySeque" id="e24-fN-wH6" sceneMemberID="viewController">
+                <tableViewController title="JumpBySeque" id="e24-fN-wH6" customClass="JumpBySequeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PeV-qf-Gp5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,11 +276,13 @@
                     <tabBarItem key="tabBarItem" title="JumpBySeque" id="J3x-Js-3FV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="agX-Sv-Foh" kind="presentation" identifier="modal2" id="ZS8-Af-BUo"/>
-                        <segue destination="RMy-jT-eG4" kind="presentation" id="7be-WQ-Jb7"/>
+                        <segue destination="agX-Sv-Foh" kind="show" identifier="modal2" id="ZS8-Af-BUo"/>
+                        <segue destination="RMy-jT-eG4" kind="presentation" identifier="modal1" id="7be-WQ-Jb7"/>
+                        <segue destination="Nwu-HJ-eTM" kind="unwind" unwindAction="unwindSegueViewController:" id="D7T-np-pF3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FeM-fH-KEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Nwu-HJ-eTM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1052" y="1407"/>
         </scene>
@@ -279,12 +303,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dK-G8-Xrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720" y="2119"/>
+            <point key="canvasLocation" x="766" y="2124"/>
         </scene>
-        <!--View Controller-->
+        <!--Segue Unwind View Controller-->
         <scene sceneID="rQw-Jl-t9J">
             <objects>
-                <viewController id="agX-Sv-Foh" sceneMemberID="viewController">
+                <viewController id="agX-Sv-Foh" customClass="SegueUnwindViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yz8-TL-QPE"/>
                         <viewControllerLayoutGuide type="bottom" id="6Ym-wL-bda"/>
@@ -292,13 +316,25 @@
                     <view key="view" contentMode="scaleToFill" id="mcQ-Dk-lKc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifb-e9-jGe">
+                                <rect key="frame" x="84" y="247" width="46" height="30"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="agX-Sv-Foh" eventType="touchUpInside" id="A4a-cl-wEx"/>
+                                    <segue destination="Nwu-HJ-eTM" kind="unwind" unwindAction="unwindSegueViewController:" id="CZ7-Vw-Hr0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPf-2v-qAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339" y="2124"/>
+            <point key="canvasLocation" x="1429" y="1616"/>
         </scene>
     </scenes>
 </document>

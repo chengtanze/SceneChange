@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0E2FC37F-8B5E-47CC-AC3A-EF8BF014522F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SceneChange</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5DCEF6E5E727E7E12FF75A510B95AF4EAD1D1E7B</key>
+		<string>https://github.com/chengtanze/SceneChange.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SceneChange.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5DCEF6E5E727E7E12FF75A510B95AF4EAD1D1E7B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chengtanze/SceneChange.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5DCEF6E5E727E7E12FF75A510B95AF4EAD1D1E7B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5DCEF6E5E727E7E12FF75A510B95AF4EAD1D1E7B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SceneChange</string>
+		</dict>
+	</array>
+</dict>
+</plist>
