@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GreenViewController : UIViewController
+- (IBAction)goBack:(id)sender;
+- (IBAction)up:(id)sender;
 
 @end

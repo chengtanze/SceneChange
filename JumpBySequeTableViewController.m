@@ -77,6 +77,16 @@
     return cell;
 }
 
+- (UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier
+{
+    UIStoryboard * mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    JumpBySequeTableViewController * home = [mainStoryboard instantiateViewControllerWithIdentifier:@"JumpBySequeTableViewController"];
+    
+    UIStoryboardSegue * segue = [[UIStoryboardSegue alloc]initWithIdentifier:@"MyCodeGoHome" source:self destination:home];
+    
+    return segue;
+}
+
 - (IBAction)unwindSegueViewController:(UIStoryboardSegue *)segue {
     NSLog(@"%@, %@", [segue.destinationViewController description], [segue.sourceViewController description]);
 }
