@@ -10,5 +10,6 @@
 
 @interface PresentViewController : UIViewController
 - (IBAction)back:(id)sender;
+- (IBAction)pushBack:(id)sender;
 
 @end

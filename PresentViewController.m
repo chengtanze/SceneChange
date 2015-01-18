@@ -40,4 +40,8 @@
     }];
     
 }
+
+- (IBAction)pushBack:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
